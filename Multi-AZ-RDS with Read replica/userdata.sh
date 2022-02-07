@@ -1,5 +1,7 @@
-#!/bin/bash
-sudo yum install httpd -y
-sudo echo "Welcome to my EC2 Server" > /usr/share/nginx/html/index.html
+#! /bin/bash
+sudo su
 sudo yum update -y
-sudo service httpd start
+sudo yum install -y httpd
+sudo systemctl start httpd
+sudo systemctl enable httpd
+echo  "Welcome to AWS" > /var/www/html/index.html
